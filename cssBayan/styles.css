@@ -44,15 +44,26 @@ h3 {
     padding: 1em 1em;
     width: 100%;
     box-sizing: border-box;
-    font-size: 1rem;
     background-color: antiquewhite;
     border: 1px solid rgb(182, 113, 113);
 }
 
+.accordion__title {
+    font-size: 1rem;
+
+}
+
+input {
+    display: none;
+}
+
+
+
 .accordion__image-wrapper {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+    margin-top: 0.5em;
     padding: 0.5em;
 }
 
@@ -80,6 +91,7 @@ h3 {
     }
 
     .accordion__image-wrapper {
+        margin-top: 1em;
         padding: 1em;
     }
 }
@@ -90,11 +102,13 @@ h3 {
         font-size: 1.5em;
     }
 
-    header, footer {
+    header,
+    footer {
         padding: 3em;
     }
 
-    h1, h3 {
+    h1,
+    h3 {
         font-size: 4rem;
     }
 
@@ -104,6 +118,37 @@ h3 {
     }
 
     .accordion__image-wrapper {
+        margin-top: 2em;
         padding: 2em;
     }
 }
+
+.accordion:hover .accordion__label {
+    color: rgb(141, 4, 4);
+    cursor: pointer;
+}
+
+input:checked + label >.accordion__image-wrapper {
+    display: flex;
+}
+
+input:checked +.accordion__label {
+    color: rgb(141, 4, 4);
+}
+
+input:checked+.accordion__image-wrapper {
+    display: none;
+}
+
+.accordion__item:hover  .accordion__image-wrapper {
+    cursor: pointer;
+    display: flex;
+}
+
+.accordion__item:active  .accordion__label{
+    color: #000000;
+    cursor: pointer;
+}
+
+
+
