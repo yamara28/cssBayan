@@ -120,11 +120,6 @@ input {
     }
 }
 
-
-
-
-
-
 .accordion:hover .accordion__label {
     color: rgb(141, 4, 4);
     cursor: pointer;
@@ -142,7 +137,7 @@ input:checked + label >.accordion__image-wrapper {
     transition: all 1.5s ease;
 }
 
-input:checked +.accordion__label {
+.accordion:hover input:checked + .accordion__label, .accordion .accordion__item:hover  .accordion__label {
     color: rgb(141, 4, 4);
     background-image: url("image/minus-solid.svg");
     background-repeat: no-repeat;
@@ -159,7 +154,7 @@ input:checked +.accordion__label {
     transition: all 1.5s ease;
 }
 
-.accordion__item:active  .accordion__label{
+.accordion .accordion__item:active  .accordion__label {
     color: #000000;
     cursor: pointer;
 }
