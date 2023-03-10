@@ -9,7 +9,8 @@ body {
     background-image: url("image/background.webp");
 }
 
-header, footer {
+header,
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,7 +18,8 @@ header, footer {
     padding: 1.5em;
 }
 
-h1, h3 {
+h1,
+h3 {
     font-size: 1rem;
 }
 
@@ -62,11 +64,13 @@ h1, h3 {
         font-size: 1em;
     }
 
-    header, footer {
+    header,
+    footer {
         padding: 2em;
     }
 
-    h1, h3 {
+    h1,
+    h3 {
         font-size: 3rem;
     }
 
