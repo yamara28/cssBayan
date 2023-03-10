@@ -4,15 +4,20 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
+    font-family: 'Dancing Script', cursive;
     font-size: 0.5em;
     background-image: url("image/background.webp");
 }
 
-header {
+header, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 1.5em;
 }
 
-h1 {
+h1, h3 {
     font-size: 1rem;
 }
 
@@ -29,6 +34,7 @@ h1 {
 .accordion__item {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .accordion__label {
@@ -46,4 +52,54 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 0.5em;
+}
+
+
+
+@media screen and (min-width: 820px) {
+
+    body {
+        font-size: 1em;
+    }
+
+    header, footer {
+        padding: 2em;
+    }
+
+    h1, h3 {
+        font-size: 3rem;
+    }
+
+    .accordion__label {
+        padding: 1.5em 1.5em;
+        font-size: 1.5rem;
+    }
+
+    .accordion__image-wrapper {
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+    body {
+        font-size: 1.5em;
+    }
+
+    header, footer {
+        padding: 3em;
+    }
+
+    h1, h3 {
+        font-size: 4rem;
+    }
+
+    .accordion__label {
+        padding: 2em 2em;
+        font-size: 2rem;
+    }
+
+    .accordion__image-wrapper {
+        padding: 2em;
+    }
 }
