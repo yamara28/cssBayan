@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 0.5em;
+    background-image: url("image/background.webp");
+}
+
+header {
+    padding: 1.5em;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.accordion__item {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion__label {
+    display: block;
+    padding: 1em 1em;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    background-color: antiquewhite;
+    border: 1px solid rgb(182, 113, 113);
+}
+
+.accordion__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+}
