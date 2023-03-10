@@ -50,24 +50,23 @@ h3 {
 
 .accordion__title {
     font-size: 1rem;
-
 }
 
 input {
     display: none;
 }
 
-
-
 .accordion__image-wrapper {
-    display: none;
+    display: flex;
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
     align-items: center;
     justify-content: center;
     margin-top: 0.5em;
-    padding: 0.5em;
+    transition: all 1.5s ease;
 }
-
-
 
 @media screen and (min-width: 820px) {
 
@@ -92,7 +91,6 @@ input {
 
     .accordion__image-wrapper {
         margin-top: 1em;
-        padding: 1em;
     }
 }
 
@@ -119,36 +117,49 @@ input {
 
     .accordion__image-wrapper {
         margin-top: 2em;
-        padding: 2em;
     }
 }
+
+
+
+
+
 
 .accordion:hover .accordion__label {
     color: rgb(141, 4, 4);
     cursor: pointer;
+    background-image: url("image/plus-solid.svg");
+    background-repeat: no-repeat;
+    background-position: 14em 1.5em;
+    background-size: 1em 1em;
 }
 
 input:checked + label >.accordion__image-wrapper {
-    display: flex;
+    visibility: visible;
+    overflow: visible;
+    max-height: 100%;
+    opacity: 1;
+    transition: all 1.5s ease;
 }
 
 input:checked +.accordion__label {
     color: rgb(141, 4, 4);
-}
-
-input:checked+.accordion__image-wrapper {
-    display: none;
+    background-image: url("image/minus-solid.svg");
+    background-repeat: no-repeat;
+    background-position: 14em 1.5em;
+    background-size: 1em 1em;
 }
 
 .accordion__item:hover  .accordion__image-wrapper {
     cursor: pointer;
-    display: flex;
+    visibility: visible;
+    overflow: visible;
+    max-height: 100%;
+    opacity: 1;
+    transition: all 1.5s ease;
 }
 
 .accordion__item:active  .accordion__label{
     color: #000000;
     cursor: pointer;
 }
-
-
-
