@@ -5,7 +5,6 @@ body {
     justify-content: center;
     margin: 0;
     font-family: 'Dancing Script', cursive;
-    font-size: 0.5em;
     background-image: url("image/background.webp");
 }
 
@@ -15,12 +14,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5em;
-}
-
-h1,
-h3 {
-    font-size: 1rem;
 }
 
 .accordion {
@@ -48,10 +41,6 @@ h3 {
     border: 1px solid rgb(182, 113, 113);
 }
 
-.accordion__title {
-    font-size: 1rem;
-}
-
 input {
     display: none;
 }
@@ -66,6 +55,27 @@ input {
     justify-content: center;
     margin-top: 0.5em;
     transition: all 1.5s ease;
+}
+
+@media screen and (min-width: 320px) {
+
+    body {
+        font-size: 0.5em;
+    }
+
+    header,
+    footer {
+        padding: 1.5em;
+    }
+
+    h1,
+    h3 {
+        font-size: 1rem;
+    }
+
+    .accordion__title {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 820px) {
@@ -120,16 +130,40 @@ input {
     }
 }
 
-.accordion:hover .accordion__label {
-    color: rgb(141, 4, 4);
-    cursor: pointer;
-    background-image: url("image/plus-solid.svg");
-    background-repeat: no-repeat;
-    background-position: 14em 1.5em;
-    background-size: 1em 1em;
+@media (hover: hover) {
+    .accordion:hover .accordion__label {
+        color: rgb(141, 4, 4);
+        cursor: pointer;
+        background-image: url("image/plus-solid.svg");
+        background-repeat: no-repeat;
+        background-position: 14em 1.5em;
+        background-size: 1em 1em;
+    }
+
+    .accordion:hover input:checked + .accordion__label,
+    .accordion .accordion__item:hover .accordion__label {
+        color: rgb(141, 4, 4);
+        background-image: url("image/minus-solid.svg");
+        background-repeat: no-repeat;
+        background-position: 14em 1.5em;
+        background-size: 1em 1em;
+    }
+
+    .accordion__item:hover .accordion__image-wrapper {
+        cursor: pointer;
+        visibility: visible;
+        overflow: visible;
+        max-height: 100%;
+        opacity: 1;
+        transition: all 1.5s ease;
+    }
 }
 
-input:checked + label >.accordion__image-wrapper {
+input:checked + label {
+    color: rgb(141, 4, 4);
+}
+
+input:checked + label > .accordion__image-wrapper {
     visibility: visible;
     overflow: visible;
     max-height: 100%;
@@ -137,24 +171,8 @@ input:checked + label >.accordion__image-wrapper {
     transition: all 1.5s ease;
 }
 
-.accordion:hover input:checked + .accordion__label, .accordion .accordion__item:hover  .accordion__label {
-    color: rgb(141, 4, 4);
-    background-image: url("image/minus-solid.svg");
-    background-repeat: no-repeat;
-    background-position: 14em 1.5em;
-    background-size: 1em 1em;
-}
-
-.accordion__item:hover  .accordion__image-wrapper {
-    cursor: pointer;
-    visibility: visible;
-    overflow: visible;
-    max-height: 100%;
-    opacity: 1;
-    transition: all 1.5s ease;
-}
-
-.accordion .accordion__item:active  .accordion__label {
+.accordion .accordion__item:active .accordion__label {
     color: #000000;
     cursor: pointer;
+    filter: blur(1px);
 }
